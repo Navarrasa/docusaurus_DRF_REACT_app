@@ -1,0 +1,1 @@
+# docusaurus_DRF_REACT_app
