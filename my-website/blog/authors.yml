@@ -1,23 +1,39 @@
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+bruno:
+  name: Gustavo Bruno
+  title: FullStack Developer @ Bosch
+  url: https://github.com/Navarrasa
+  image_url: https://avatars.githubusercontent.com/u/159857970?s=96&v=4
   page: true
   socials:
-    x: yangshunz
-    github: yangshun
+    linkedin: Gustavo Bruno
+    github: Navarrasa
 
-slorber:
-  name: Sébastien Lorber
+adrian:
+  name: Adrian Navarro
   title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
+  url: https://github.com/Adrian-Matargi
+  image_url: https://avatars.githubusercontent.com/u/178478027?v=4
+  page: True
   socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    linkedin: Adrian 
+    github:  Adrian-Matargi
+
+kamila:
+  name: Kamila Vitória
+  title: Docusaurus maintainer
+  url: https://github.com/CodeByKamis
+  image_url: https://avatars.githubusercontent.com/u/190089381?v=4
+  page: True
+  socials:
+    linkedin: Kamila Vitoria
+    github: CodeByKamis
+
+fran:
+  name: Francisca Yasmim
+  title: Docusaurus maintainer
+  url: https://github.com/francisca-yasmin
+  image_url: https://avatars.githubusercontent.com/u/178475424?v=4
+  page: True
+  socials:
+    linkedin: Francisca Yasmim
+    github: francisca-yasmin
