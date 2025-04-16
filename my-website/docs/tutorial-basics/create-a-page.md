@@ -13,62 +13,79 @@ Na parte superior do arquivo `urls.py` estarão localizados os imports que serã
 ### Realizando os import's
 importar a variável `path` é importante pois ela é quem define as rotas das Urls que serão passadas no arquivo.
 
-```
+```py title="urls.py"
 from django.urls import path
 ```
 Importa todas as funções do arquivo `view` que vai ser utilizada no arquivo onde os imports estão.
 
-```
+
+```py title="urls.py"
 from .views import *
-``` 
+```
 
 O import em questão está usando uma biblioteca do `djangorestframework_simplejwt` que usa de token para realizar a autenticação do usuário. Retornando dois tipos de token um de acesso e um refresh.
-``` 
+
+```py title="urls.py"
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
 ```
+## Urls Professores
 
-## Corpo do Arquivo
+As primeiras urls tem como finalidade listar os professores cadastrados no banco de dados. Assim como realizar uma busca pelo `id` do professor caso a listagem seja de forma mais específica.
 
+```py title="urls.py"
+path('professores', listar_professores),
+path('prof', ProfessoresView.as_view()),
+path('id/<int:pk>', ProfessoresDetailView.as_view())
 ```
 
-```
-Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+O token é gerado para realizar a navegação pela aplicação, mas o token pode expirar depois de um certo tempo de uso, por isso o `refresh` faz o papel de renovar o token para continuação da navegação.
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
+```py title="urls.py"
+path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'), 
+path('refresh/', TokenRefreshView.as_view(), name='token_refresh'), 
 ```
 
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+Para buscar por um professor pelo seu nome, é possìvel que o usuário digite o nome e a busca seja realizada.
 
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
-
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
+```py title="urls.py"
+path('buscar/nome/', buscar_nome_professor), 
+path('search/', ProfessoresSearchView.as_view()),
 ```
 
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+## Urls Disciplinas
+
+A visualização e a busca pelas disciplinas pode ser feita no endereço `disciplinas` além de ser possível visualizar de forma mais específica por meio da chave primária da disciplina.
+
+```py title="urls.py"
+path('disciplinas', DisciplinasView.as_view()),
+path('disciplina/<int:pk>', DisciplinaDetailView.as_view()),
+```
+
+## Urls Ambientes 
+
+Os ambientes podem ser visualizados e buscados da mesma forma que as disciplinas, além de serem buscados pela chave primária do ambiente de acordo com o id que se refere a ela no banco de dados.
+
+```py title="urls.py"
+path('ambientes', AmbientesView.as_view()),
+path('ambiente/<int:pk>', AmbienteDetailView.as_view()),
+```
+## Urls Turmas
+
+As turmas podem ser visualizadas de um modo geral, além de serem buscadas por meio da chave primária.
+```py title="urls.py"
+
+path('turmas', TurmasView.as_view()),
+path('turma/<int:pk>', TurmaDetailView.as_view()),
+```
+
+## Urls Curso
+
+Os cursos podem ser visualizados de forma integral, além de buscados por meio da chave primária e ser exibidas os detalhes desse curso nessa busca mais detalhada que o usuário pode realizar.
+
+```py title="urls.py"
+path('cursos', CursosView.as_view()),
+path('curso/<int:pk>', CursoDetailView.as_view()),
+```
