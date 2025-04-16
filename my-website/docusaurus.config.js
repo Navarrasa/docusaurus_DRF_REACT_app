@@ -87,7 +87,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Devs', position: 'left'},
+          {to: '/blog/welcome', label: 'Devs', position: 'left'},
           {
             href: 'https://github.com/Navarrasa/docusaurus_DRF_REACT_app',
             label: 'GitHub',

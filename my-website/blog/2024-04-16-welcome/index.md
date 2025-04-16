@@ -15,5 +15,9 @@ Framework para estilização e prototipação de páginas Web.
 
 ### Tópicos
 
-- KickStart para a instalação do projeto
-- 
+- KickStart para a instalação do projeto;
+- Tutorial básico para a utilização do projeto;
+- Extras do Projeto;
+
+
+### Caso seja do seu interesse, visite o nosso  [KickStart](../../docs/kickstart)
