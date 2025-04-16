@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Fácil de Utilizar',
-    Svg: require('@site/static/img/interface.png').default,
+    Svg: require('@site/static/img/interface.svg').default,
     description: (
       <>
         Este React App é fácil de utilizar, com uma interface intuitiva e
@@ -16,7 +16,7 @@ const FeatureList = [
   },
   {
     title: 'Foca naquilo que importa',
-    Svg: require('@site/static/img/crud.png').default,
+    Svg: require('@site/static/img/crud.svg').default,
     description: (
       <>
         Este aplicativo ajuda principalmente a desenvolver operações CRUD eficientes para
@@ -27,7 +27,7 @@ const FeatureList = [
   },
   {
     title: 'Suporte com React',
-    Svg: require('@site/static/img/django_react.png').default,
+    Svg: require('@site/static/img/django_react.svg').default,
     description: (
       <>
         Este aplicativo é construído com React, uma biblioteca JavaScript popular
