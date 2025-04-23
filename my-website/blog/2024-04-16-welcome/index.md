@@ -2,7 +2,7 @@
 slug: welcome
 title: Welcome
 authors: [bruno]
-# tags: [github]
+tags: [github]
 ---
 
 Seja bem vindo à nossa documentação sobre Desenvolvimento de Soluções para aplicações  back/frontEnd
