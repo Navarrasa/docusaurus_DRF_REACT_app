@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Website React App',
+  title: 'Os Tralaleros Tralalas',
   tagline: 'Documentação KickStart',
   favicon: 'img/favicon.ico',
 
