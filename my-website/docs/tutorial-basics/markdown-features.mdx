@@ -2,13 +2,100 @@
 sidebar_position: 4
 ---
 
-# Markdown Features
+# Views
 
-Docusaurus supports **[Markdown](https://daringfireball.net/projects/markdown/syntax)** and a few **additional features**.
+Nas `Views` é onde está localizada as funções da minha apliacação, juntamente com o escopo de cada funcionalidade.
 
-## Front Matter
+## Estrutura do Arquivo
 
-Markdown documents have metadata at the top called [Front Matter](https://jekyllrb.com/docs/front-matter/):
+A estrutura do arquivo `Views` assim como o arquivo de `Urls` começa com os import's das bibliotecas que serão
+utilizadas no desenvolvimento do arquivo. Seguindo pelas funções que darão vida a aplicação de fato.
+
+### Realizando os Import's
+
+Importa a biblioteca `render` que redenriza templates em HTML juntamente com o contexto de dados.
+```py title="views.py"
+from django.shortcuts import render 
+```
+
+Importa todos modelos do arquivo `models.py`, ou seja, tudo que for público será importado.
+```py title="views.py"
+from .models import *
+```
+
+Importa a biblioteca `response` que retorna uma resposta HTTP
+```py title="views.py"
+from rest_framework.response import Response
+```
+
+Importa dois decoradores do django, sendo o primeiro `@api_view`  transforma uma função normal do 
+Django em uma view da API, a `@permission_classes` permite que você defina quais permissões são necessárias para acessar a view.
+```py title="views.py"
+from rest_framework.decorators import api_view, permission_classes
+```
+
+imports genericos do Django que funcionam para criar, listar, deletar e atualiar objetos em uma lista 
+que ajudam a criar APIs de forma rápida sem a repetição de código.
+```py title="views.py"
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView, ListAPIView 
+```
+
+Importa codigos de status HTTP 
+```py title="views.py"
+from rest_framework import status 
+```
+
+Import usado para controlar quem pode acessar uma view dentro da API.
+```py title="views.py"
+from rest_framework.permissions import IsAuthenticated, AllowAny
+```
+
+Importa filtros dentro da aplicação que permite realizar busca por palavras chave, campos especificos 
+assim como realizar busca simples nas views.
+```py title="views.py"
+from rest_framework.filters import SearchFilter
+```
+
+Realiza um import que permite adicionar filtros avançados na sua API usando a biblioteca do django rest.
+```py title="views.py"
+from django_filters.rest_framework import DjangoFilterBackend
+```
+
+
+## Listar Professores
+
+A função listar_professores 
+```py title="views.py"
+def listar_professores(request):
+    if request.method == 'GET':
+        queryset = Cadastro.objects.all()
+        serializer = CadastroSerializer(queryset, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        serializer = CadastroSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        else:
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```text title="my-doc.md"
 // highlight-start
