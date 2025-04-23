@@ -2,46 +2,48 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Tutorial de Introdução
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Venha aprender a como **utilizar o nosso aplicativo react em menos de 5 minutos!**
 
-## Getting Started
+## Iniciando os trabalhos
 
-Get started by **creating a new site**.
+Comece clonando este repositório: [Repositório React App](https://github.com/Navarrasa/docusaurus_DRF_REACT_app.git)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### O que você vai precisar
 
-### What you'll need
+- [Node.js](https://nodejs.org/en/download/) versão 18.0 ou acima:
+  - Quando estiver instalando o Node.Js, é recomendado marcar todas as caixas de marcação relacionadas às dependencias externas.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Python](https://www.python.org/downloads/release/python-3133/) versão 3.0 ou acima
+  - Quando instalar o Python, tenha certeza de estar instalando-o como um administrador do sistema, e adicionar ele no PATH.
 
-## Generate a new site
+## Instale as dependências necessárias para os servidores
 
-Generate a new Docusaurus site using the **classic template**.
+Abra o repositório no caminho: `C:\Users\SeuUsuario\CaminhodeDownload\docusaurus_DRF_REACT_app\my-website`
 
-The classic template will automatically be added to your project after you run the command:
+Digite o comando
 
 ```bash
-npm init docusaurus@latest my-website classic
+npm install
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Lembrando que: Esses comandos são executados no prompt de comando, basta digitar `cmd` na aba de pesquisas do windows, no caso queira ser mais rápido, vá na barra de caminhos do próprio Explorador de Arquivos, onde se encontra o repositório e digite `cmd`
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+Este comando vai instalar todas as dependencias necessárias para iniciar o servidor local
 
-## Start your site
+## Inicie o Website
 
-Run the development server:
+Inicie o servidor local:
 
 ```bash
 cd my-website
 npm run start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+O comando `cd` muda o diretório (pasta) em que você está trabalhando. Para trabalhar com o novo site Docusaurus, é necessário navegar com o terminal lá, onde estão todos os arquivos.
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+O comando `npm run start` contrói o seu website localmente e te entrega através de um servidor de desenvolvimento local, pronto para a sua visualização na URL http://localhost:3000/.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Abra `docs/kickstart.md` (essa página), e edite algumas linhas. O site recarrega **automaticamente** e te mostra as mudanças.
+
