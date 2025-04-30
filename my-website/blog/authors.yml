@@ -1,4 +1,4 @@
-bruno:
+- id: bruno
   name: Gustavo Bruno
   title: FullStack Developer @ Bosch
   url: https://github.com/Navarrasa
@@ -7,33 +7,30 @@ bruno:
   socials:
     linkedin: Gustavo Bruno
     github: Navarrasa
-
-adrian:
+- id: adrian
   name: Adrian Navarro
-  title: Docusaurus maintainer
+  title: FullStack Developer @ Bosch
   url: https://github.com/Adrian-Matargi
   image_url: https://avatars.githubusercontent.com/u/178478027?v=4
-  page: True
+  page: true
   socials:
-    linkedin: Adrian 
-    github:  Adrian-Matargi
-
-kamila:
+    linkedin: Adrian
+    github: Adrian-Matargi
+- id: kamila
   name: Kamila Vitória
-  title: Docusaurus maintainer
+  title: FullStack Developer @ Bosch
   url: https://github.com/CodeByKamis
   image_url: https://avatars.githubusercontent.com/u/190089381?v=4
-  page: True
+  page: true
   socials:
     linkedin: Kamila Vitória
     github: CodeByKamis
-
-fran:
+- id: fran
   name: Francisca Yasmim
-  title: Docusaurus maintainer
+  title: Frontend Developer @ Bosch
   url: https://github.com/francisca-yasmin
   image_url: https://avatars.githubusercontent.com/u/178475424?v=4
-  page: True
+  page: true
   socials:
     linkedin: Francisca Yasmim
     github: francisca-yasmin
