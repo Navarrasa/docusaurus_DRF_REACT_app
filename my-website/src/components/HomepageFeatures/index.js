@@ -6,15 +6,20 @@ import styles from './styles.module.css';
 const Authors = require('@site/blog/authors.yml').default || require('@site/blog/authors.yml');
 
 // Definir o FeatureList com base nos autores
-const FeatureList = Authors.map((author) => ({
+const FeatureList = Object.values(Authors).map((author) => ({
   title: author.name,
   image_url: author.image_url,
   description: (
     <>
       {author.title} <br />
-      <a href={`https://linkedin.com/in/${author.socials.linkedin.replace(/\s/g, '-').toLowerCase()}`} target="_blank" rel="noopener noreferrer">
+      <a
+        href={`https://linkedin.com/in/${author.socials.linkedin.replace(/\s/g, '-').toLowerCase()}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         LinkedIn
-      </a> |{' '}
+      </a>{' '}
+      |{' '}
       <a href={author.url} target="_blank" rel="noopener noreferrer">
         GitHub
       </a>

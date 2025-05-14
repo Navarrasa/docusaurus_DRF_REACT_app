@@ -1,4 +1,4 @@
-- id: bruno
+bruno:
   name: Gustavo Bruno
   title: FullStack Developer @ Bosch
   url: https://github.com/Navarrasa
@@ -7,7 +7,8 @@
   socials:
     linkedin: Gustavo Bruno
     github: Navarrasa
-- id: adrian
+
+adrian:
   name: Adrian Navarro
   title: FullStack Developer @ Bosch
   url: https://github.com/Adrian-Matargi
@@ -16,7 +17,8 @@
   socials:
     linkedin: Adrian
     github: Adrian-Matargi
-- id: kamila
+
+kamila:
   name: Kamila Vitória
   title: FullStack Developer @ Bosch
   url: https://github.com/CodeByKamis
@@ -25,7 +27,8 @@
   socials:
     linkedin: Kamila Vitória
     github: CodeByKamis
-- id: fran
+
+fran:
   name: Francisca Yasmim
   title: Frontend Developer @ Bosch
   url: https://github.com/francisca-yasmin
